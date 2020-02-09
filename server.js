@@ -3,7 +3,8 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 //  porta do heroku 
-var porta = process.env.PORT || 8080;
+var porta = process.env.PORT ;
+console.log(porta)
 
 // iniciando o App
 const app = express();
