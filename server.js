@@ -11,18 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-mongoose.connect('mongodb://localhost:27017/nodepai', { useNewUrlParser: true });
-
-/*
-mongoose.connect(uristring, function (err, res) {
-  if (err) {
-  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
-  } else {
-  console.log ('Succeeded connected to: ' + uristring);
-  }
-});
-*/
-
+mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true });
 
 requireDir('./src/models');
 
