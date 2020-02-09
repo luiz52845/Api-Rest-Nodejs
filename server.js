@@ -3,6 +3,7 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 //  porta do heroku 
+<<<<<<< HEAD
 var porta = process.env.PORT || 5000;
 
 var uristring =
@@ -10,6 +11,9 @@ process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 'mongodb://localhost/HelloMongoose';
 
+=======
+//var porta = process.env.PORT || 8080;
+>>>>>>> parent of 2ddd315a... trocando a porta
 
 // iniciando o App
 const app = express();
@@ -36,4 +40,4 @@ const Product = mongoose.model('Product');
 
 app.use('/api', require('./src/routes'));
 
-app.listen(porta);
+app.listen(3001);
