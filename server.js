@@ -35,4 +35,4 @@ const Product = mongoose.model('Product');
 
 app.use('/api', require('./src/routes'));
 
-app.listen(uristring, porta);
+app.listen(uristring || porta);
