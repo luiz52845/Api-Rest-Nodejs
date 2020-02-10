@@ -1,23 +1,26 @@
+
+
+
 {
-  "name": "dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+  "name": "hello-mongoose",
+  "version": "0.3.0",
+  "description": "MongoDB with Mongoose on Node.js example",
+  "main": "app.js",
+  "engines" : { 
+      "node" : ">=4.1.1",
+      "npm" : ">=2.1.x"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": "https://github.com/mongolab/hello-mongoose.git",
+  "authors": [ "Ben Wen", "Chris Chang" ],
+  "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.11",
-    "mongoose-paginate": "^5.0.3",
-    "require-dir": "^1.2.0"
+    "mongoose": ">=4.1.11"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+  "changelog" : [{"0.0.0": "Initial release"},
+		             {"0.1.0": "Update to Mongoose 3.5.7; new MongoClient semantics"},
+                 {"0.2.0": "Update to Mongoose 3.8.15; updated Node engine to 0.10.31; updated npm engine to >=1.4"},
+                 {"0.3.0": "Update to Mongoose >=4.1.11; updated Node engine to >=4.1.1; updated npm engine to >=2.1.x"}],
+  "homepage" : "http://hello-mongoose.herokuapp.com"
 }
+
+
