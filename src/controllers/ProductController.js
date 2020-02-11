@@ -46,9 +46,10 @@ module.exports = {
     for (var i = 0; i < 9; i++) {
       const product = await Product.create(req.body);
 
-      return res.json(product);
+  
     }
-   }
+    return res.send();
+   },
 
 
    
