@@ -13,9 +13,10 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-//mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true0 });
+//ngoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true0 });
 
-mongoose.connect('mongodb://<dbuser>:<dbpassword>@ds033059.mlab.com:33059/dbmongo_heroku', { useNewUrlParser: true });
+
+mongoose.connect('mongodb://heroku_0pbcbp44:e1a7fq36p46fhhcrcgai778f27@ds063177.mlab.com:63177/heroku_0pbcbp44', { useNewUrlParser: true });
 
 requireDir('./src/models');
 
