@@ -27,13 +27,13 @@ module.exports = {
 
     return res.json(product);
   },
-/*
-  async update(req, res) {
-    const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
-
-    return res.json(product);
-  },
-*/
+  /*
+    async update(req, res) {
+      const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  
+      return res.json(product);
+    },
+  */
   async destroy(req, res) {
     await Product.findByIdAndRemove(req.params.id);
 
@@ -41,16 +41,25 @@ module.exports = {
   },
 
   //metodo para inserir varios dados no banco
+  async teste() {
+    for (var i = 0; i < 9; i++) { }
+    const product = await Product.create(req.body);
+
+
+  },
+
   async store(req, res) {
 
-    for (var i = 0; i < 9; i++) {
-      const product = await Product.create(req.body);
 
-  
-    }
-    return res.send();
-   },
+    const product = await Product.create(req.body);
+    teste();
+
+    return res.send(product);
 
 
-   
+
+  },
+
+
+
 }
