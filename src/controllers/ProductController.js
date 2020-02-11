@@ -27,16 +27,29 @@ module.exports = {
 
     return res.json(product);
   },
-
+/*
   async update(req, res) {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
     return res.json(product);
   },
-
+*/
   async destroy(req, res) {
     await Product.findByIdAndRemove(req.params.id);
 
     return res.send();
-  }
+  },
+
+  //metodo para inserir varios dados no banco
+  async store(req, res) {
+
+    for (var i = 0; i < 9; i++) {
+      const product = await Product.create(req.body);
+
+      return res.json(product);
+    }
+   }
+
+
+   
 }
