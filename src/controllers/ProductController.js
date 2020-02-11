@@ -50,7 +50,7 @@ module.exports = {
 
   async store(req, res) {
 
-    for (var i = 0; i < 9; i++) {
+    for (var i = 0; i < 10000; i++) {
       const product = await Product.create(req.body);
 
 
