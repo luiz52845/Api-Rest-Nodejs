@@ -20,14 +20,14 @@ module.exports = {
 
     return res.json(product)
   },
-  /*
+  
     // metodo para criação
     async store(req, res) {
       const product = await Product.create(req.body);
   
       return res.json(product);
     },
-    */
+    
   async update(req, res) {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
@@ -40,15 +40,9 @@ module.exports = {
     return res.send();
   },
 
-  //metodo para inserir varios dados no banco
-  async teste() {
-
-    const product = await Product.create(req.body);
-
-
-  },
-
-  async store(req, res) {
+  //metodo para inserir varios dados no banco (teste)
+  /*
+    async store(req, res) {
 
     for (var i = 0; i < 10000; i++) {
       const product = await Product.create(req.body);
@@ -57,7 +51,5 @@ module.exports = {
     }
 
   },
-
-
-
+*/
 }
